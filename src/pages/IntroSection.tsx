@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Introsection.css";
-import IntroImage from "../assets/intro-img.jpg";
+import IntroImage from "../assets/images/intro-img.jpg";
 import { motion } from "framer-motion";
 
 const IntroSection: React.FC = () => {

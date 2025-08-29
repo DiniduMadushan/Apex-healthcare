@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import { motion } from "framer-motion";
 import IntroSection from "./IntroSection";
+import FacilitiesSection from "./Facilities";
+import DoctorsSection from "./DoctorsSection";
+import AboutSection from "./AboutSection";
 
 const Home: React.FC = () => {
   return (
@@ -33,6 +36,9 @@ const Home: React.FC = () => {
       </header>
 
       <IntroSection />
+      <FacilitiesSection />
+      <AboutSection />
+      <DoctorsSection />
     </>
     
   );

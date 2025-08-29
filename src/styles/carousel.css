@@ -1,0 +1,96 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.carousel {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+}
+
+.slide.prev,
+.slide.next {
+  opacity: 0.5;
+  transform: scale(0.85);
+  z-index: 2;
+}
+
+.slide.prev {
+  left: -30%;
+}
+.slide.next {
+  right: -30%;
+}
+
+.slide.hidden {
+  display: none;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.nav-button.left {
+  left: 10px;
+}
+
+.nav-button.right {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active-dot {
+  background: #007bff;
+}
