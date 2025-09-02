@@ -6,7 +6,6 @@ import doc2 from '../assets/images/doctors/doc2.webp';
 import doc3 from '../assets/images/doctors/doc3.jpg';
 import doc4 from '../assets/images/doctors/doc1.jpg';
 import doc5 from '../assets/images/doctors/doc1.jpg';
-import { motion } from 'framer-motion';
 
 interface Doctor {
   image: string;
@@ -42,33 +41,29 @@ const DoctorsSection: React.FC = () => {
     <section className="doctors-section">
       <h2>Meet Our Doctors</h2>
       <div className="carousel-container">
-        <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
-        
         <div className="carousel-wrapper">
-          <motion.div
+          <div
             className="carousel-content"
             style={{
               transform: `translateX(-${currentIndex * (100 / 3)}%)`
             }}
-            transition={{ ease: "easeInOut", duration: 0.3 }}
           >
             {doctors.map((doc, index) => (
-              <motion.div
+              <div
                 className="doctor-card"
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.15 }}
-                viewport={{ once: true, amount: 0.3 }}
               >
-                <img src={doc.image} alt={doc.name} />
+                <div className='doctor-card-content'>
+                  <img src={doc.image} alt={doc.name} />
                 <h3>{doc.name}</h3>
                 <p>{doc.description}</p>
-              </motion.div>
+                </div>
+                
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
-
+        <button className="carousel-btn left" onClick={prevSlide}>&#10094;</button>
         <button className="carousel-btn right" onClick={nextSlide}>&#10095;</button>
       </div>
     </section>
