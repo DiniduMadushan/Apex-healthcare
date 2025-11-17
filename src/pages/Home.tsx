@@ -6,6 +6,7 @@ import IntroSection from "./IntroSection";
 import FacilitiesSection from "./Facilities";
 import DoctorsSection from "./DoctorsSection";
 import AboutSection from "./AboutSection";
+import ServicesSection from "./ServicesSection";
 
 const Home: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const Home: React.FC = () => {
       <FacilitiesSection />
       <AboutSection />
       <DoctorsSection />
+      <ServicesSection />
     </>
     
   );
